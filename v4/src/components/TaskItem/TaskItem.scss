@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: $grid;
+  padding: $grid;
+  width: 100%;
+  border: 1px solid $blanco20;
+  border-radius: $border-radius;
+  background-color: lighten(#1a1a1a, 8%);
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border: 2px solid $blanco;
+    border-radius: $border-radius;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+
+    &:checked::after {
+      content: '✔';
+      position: absolute;
+      top: -2px;
+      left: 1px;
+      font-size: 14px;
+      color: $blanco;
+    }
+  }
+
+  span {
+    flex: 1;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    color: $blanco;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  
+    &.completed {
+      text-decoration: line-through;
+      color: $blanco50;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: $grid;
+
+    button {
+      background: none;
+      border: 1px solid $blanco;
+      border-radius: $border-radius;
+      color: $blanco;
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: $blanco10;
+      }
+    }
+  }
+}

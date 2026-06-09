@@ -27,19 +27,26 @@ function App() {
 
     <div className='container'>
 
-      <h1>LISTA DE TAREAS DE NACHO</h1>
+      <div className='header'>
 
-      <TaskInput 
-      value={inputValue}
-      onChange={setInputValue}
-      onAdd={addTask}
-      />
+        <h1>LISTA DE TAREAS DE NACHO</h1>
+  
+        <TaskInput 
+        value={inputValue}
+        onChange={setInputValue}
+        onAdd={addTask}
+        />
 
-      <TaskList 
-      tasks={tasks}
-      onDelete={deleteTask}
-      onToggle={toggleTask}
-      />
+        <div className='divider'></div>
+
+        </div>
+
+        <TaskList 
+        tasks={tasks}
+        onDelete={deleteTask}
+        onToggle={toggleTask}
+        />
+
     </div>
   )
 }

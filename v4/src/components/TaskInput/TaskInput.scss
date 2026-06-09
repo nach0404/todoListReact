@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.add-task {
+    display: flex;
+    align-items: center;
+    gap: $grid;
+    padding: $grid;
+    max-width: $max-width;
+    width: 100%;
+    border: 1px solid $blanco20;
+    border-radius: $border-radius;
+
+    input {
+        flex: 1;
+        background: none;
+        border: none;
+        outline: none;
+        color: $blanco;
+        font-family: $font-family;
+        font-size: $font-size-base;
+
+        &::placeholder {
+            color: $blanco50
+        }
+    }
+
+    button {
+        background: none;
+        border: 1px solid $blanco;
+        border-radius: $border-radius;
+        color: $blanco;
+        font-size: $font-size-base;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background: $blanco10;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .add-task {
+      button {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+      }
+    }
+  }

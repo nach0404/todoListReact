@@ -1,0 +1,48 @@
+@import './styles/variables';
+@import './styles/reset';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 $grid * 3;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: $negro;
+  width: 100%;
+  max-width: $max-width;
+  display: flex;
+  flex-direction: column;
+  gap: $grid;
+  padding: $grid * 2 0;
+  z-index: 10;
+
+  h1 {
+    font-size: $font-size-header;
+    font-weight: 400;
+    color: $blanco;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: $blanco20;
+  margin-top: $grid;
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .header {
+    h1 {
+      font-size: 28px;
+    }
+  }
+}
